@@ -3,46 +3,218 @@ padding: 0px;}
 
 body{
     background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color:black;
 }
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
 
 .container{
     display: grid;
-    /*grid-template-areas: 
+    width: 100%;
+grid-template-areas: 
     "header header header"
-    "main main main"
-    "main main main"
-    "main main main"
+    ". main ."
+    ". main ."
     "footer footer footer";
-    */
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(5,1fr) ;
-    height: 100vh;
+height: 100vh;
 
-    justify-content: center;
 
 
 }
 
 .header{
-    /*grid-area: header;*/
-grid-column: 1/3;
-grid-row: 1/2;
+    grid-area: header;
+    grid-column: header/header;
     display: flex;
     justify-content: space-between;
-
-
+    height: 40px;
+    align-items: center;
+    padding: 5px 10px;
 }
+
+.header .headerLeft{
+   
+    display: flex;
+    justify-content: space-evenly;
+    width: 8%;
+}
+
+.header .headerLeft a:hover{
+    color: #6c6f74;
+   text-decoration: underline black;
+}
+
+.header .headerRight{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15%;
+}
+.header .headerRight a:hover{
+    color: #6c6f74;
+    text-decoration: underline black;
+}
+
+.header .headerRight .material-icons{
+    color: #777777;
+}
+
+.header .headerRight .material-icons:hover{
+    text-decoration: none;
+    color: #000000;
+}
+.header .headerRight .singInContainer{
+    display: block;
+    background-color: #4385f6;
+    border-radius: 5px;
+    padding: 6px 14px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.header .headerRight .singInContainer a{
+    width: 100%;
+    color: #ffffff;
+}
+.header .headerRight .singInContainer a:hover{
+    text-decoration: none;
+}
+
+
+/*----------------------MAIN-----------------------------*/
 
 .main{
     grid-area: main;
+    grid-column: main/main;
+    grid-row: main/main;
+    justify-content: flex-start;
+    align-items: center;
     display: flex;
+    flex-direction: column;
 }
 
-.footer{
-    /*grid-area: footer;*/
-    grid-column: 1/3;
-grid-row: 4/5;
-    display: flex;
+
+.main .formulary{
+    width: 90%;
+    padding: 20px 0px;
+    
 }
+
+.main .searchContainer{
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #dfe1e5;
+    justify-content: space-evenly;
+    padding: 10px 1px;
+    opacity: 0.3;
+    border-radius: 60px;
+   
+    color: rgba(0,0,0,.87)
+}
+
+
+.main .searchContainer:hover{
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28), 0 1px 6px 0 rgba(32,33,36,0.28), 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.main .material-icons{
+    font-size: 22px ;
+}
+.main .searcher{
+    width: 90%;
+    border: none;
+    outline: none;
+    color: rgba(0,0,0,.87);
+    background-color: transparent;
+}
+
+
+
+.main .btnContainer{
+    display: flex;
+    justify-content:space-evenly;
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+.main .btnContainer input{
+    color:#5F6368;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-family: sans-serif;
+}
+
+.main .btnContainer input:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1),0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+background-color: #f8f8f8;
+border: 1px solid #c6c6c6;
+}
+
+
+
+/*----------------------FOOTER-----------------------------*/
+.footer{
+    grid-area: footer;
+    grid-column: footer/footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    background-color: #f2f2f2;
+    height: 37px;
+    padding: 8px 30px;
+    font-size: 14px
+
+
+    
+}
+
+
+.footer .footerLeft{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+
+}
+.footer .footerLeft a{
+font-size: 14px;
+color: #6f7277;
+}
+.footer .footerLeft a:hover{
+    text-decoration: underline;
+  }
+.footer .footerRight{
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+}
+.footer .footerRight a{
+    color: #6f7277;
+    font-size: 14px;
+}
+
+.footer .footerRight a:hover{
+  text-decoration: underline;
+}
+
+
 
 
